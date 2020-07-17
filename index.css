@@ -1,0 +1,192 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #333;
+}
+
+a{
+	text-decoration: none;
+}
+
+.box{
+	width: 1000px;
+	height: 220px;
+	margin: 50px auto;
+}
+
+.box .link{
+	float: left;
+	position: relative;
+	width: 205px;
+	height: 280px;
+	margin: 0 20px;
+	
+}
+
+.link-miss .icon{
+	background-image: url(img/mission.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.link-play .icon{
+	background-image: url(img/play.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.link-touch .icon{
+	background-image: url(img/touch.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.box .link .icon{
+	display: inline-block;
+	width: 100%;
+	height: 190px;
+	-webkit-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+
+.box .link .icon:hover{
+	transform: rotate(360deg) scale(1.2);
+	-webkit-transform: rotate(360deg) scale(1.2);
+	-ms-transform: rotate(360deg) scale(1.2);
+	-o-transform: rotate(360deg) scale(1.2);
+	-moz-transform: rotate(360deg) scale(1.2);
+	-webkit-transition: 0.2s linear;
+	-o-transition: 0.2s linear;
+	-moz-transition: 0.2s linear;
+	transition: 0.2s linear;
+	
+}
+
+.box .link .button{
+	display: block;
+	position: relative;
+	width: 180px;
+	height: 50px;
+	border: 2px solid rgba(255, 255, 255, .5);
+	line-height: 50px;
+	color: #2dcb70;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 0 0 0 20px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: auto;
+	background: url(img/allow.png) no-repeat 120px center/20% 50%;
+	-webkit-transition: .4s ease;
+	-o-transition: 0.4s ease;
+	-moz-transition: 0.4s ease;
+	-webkit-transition: 0.4s ease;
+	transition: 0.4s ease;
+}
+
+.box .link .button:hover{
+	background-position: 130px center;
+	border-color: rgba(255, 255, 255, 1);
+
+}
+
+.box .link .button .line{
+	position: absolute;	
+	display: block;
+	background: none;
+	-webkit-transition: 0.4s ease;
+	-o-transition: 0.4s ease;
+	-moz-transition: 0.4s ease;
+	transition: 0.4s ease;
+}
+
+.box .link .button .line-top{
+	left: -100%;
+	top: -2px;
+	width: 0;
+	height: 2px;
+}
+
+.box .link .button:hover .line-top{
+	width: 180px;
+	background-color: #fff;
+	position: absolute;
+	left: -2px;
+	top: -2px;
+}
+
+.box .link .button .line-right{
+	left: 100%;
+	top: -100%;
+	width: 2px;
+	height: 0;
+}
+
+.box .link .button:hover .line-right{
+	height: 50px;
+	background-color: #fff;
+	position: absolute;
+	top: -2px;
+}
+
+.box .link .button .line-left{
+	left: -2px;;
+	bottom: -100%;
+	width: 2px;
+	height: 0;
+}
+
+.box .link .button:hover .line-left{
+	height: 50px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -2px;
+}
+
+.box .link .button .line-bottom{
+	right: -100%;
+	bottom: -2px;
+	width: 0;
+	height: 2px;
+}
+
+.box .link .button:hover .line-bottom{
+	width: 180px;
+	background-color: #fff;
+	position: absolute;
+	right: -2px;
+	bottom: -2px;
+}
+
+
+.box .tooltip{
+	position: absolute;
+	padding: 0 15px;
+	height: 35px;
+	background-color: #2dcb70;
+	border-radius: 5px;
+	line-height: 35px;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+	opacity: 0;
+}
+
+.box .tooltip span{
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 8px solid transparent;
+	border-top-color: #2dcb70;
+	top: 35px;
+	left: 50%;
+	margin-left: -4px;
+}
+
+

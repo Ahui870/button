@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animate</title>
+	<link rel="stylesheet" href="index.css">
+	<style type="text/css">
+		/*.box{
+			width: 300px;
+			height: 300px;
+			margin: 100px;
+			border: 1px solid #000;
+			background-image: url(img/mission.png);
+			background-size: 50% 50%;
+			background-repeat: no-repeat;
+			background-position: left bottom;
+
+		}*/
+	</style>
+	<script src="js/jquery-3.5.0.min.js"></script>
+</head>
+<body>
+	<div class="box">
+		<div class="link link-miss">
+			<span class="icon"></span>
+			<a href="#" class="button" data-text="My mission is clear">
+				<span class="line line-top"></span>
+				<span class="line line-left"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				MISSION
+			</a>
+		</div>
+		<div class="link link-play">
+			<span class="icon"></span>
+			<a href="#" class="button" data-text="This is my playground">
+				<span class="line line-top"></span>
+				<span class="line line-left"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				PLAY
+			</a>
+		</div>
+		<div class="link link-touch">
+			<span class="icon"></span>
+			<a href="#" class="button" data-text="Lets do something-together">
+				<span class="line line-top"></span>
+				<span class="line line-left"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				TOUCH
+			</a>
+		</div>
+		<div class="tooltip">
+			<em></em>
+			<span></span>
+		</div>
+	</div>
+	<script src="jquery-3.5.0.min.js"></script>
+	<script>
+		$(function(){
+			$(".button").hover(function(){
+				var title = $(this).attr("data-text");
+					$(".tooltip em").html(title);
+					var leftLoc = $(this).offset().left;
+					var addLeft = ($(".tooltip").outerWidth() - $(this).outerWidth()) / 2;
+
+				$(".tooltip").css({
+					left: leftLoc - addLeft,
+					top: 140
+				}).animate({
+					opacity: 1,
+					top: 190
+				},300)
+			},function(){
+
+			})
+		})
+	</script>
+</body>
+</html>
